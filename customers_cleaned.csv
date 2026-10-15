@@ -1,0 +1,19 @@
+customer_id,company_name,industry,employee_count,plan,region,country,managed_service_provider_partner,customer_since,annual_recurring_revenue_usd
+C001,Lakeside Health Group,Healthcare,320,Complete Protect,Midwest,USA,,3/14/2022,20900
+C002,Aldergrove Credit Union,Financial Services,260,Complete Protect,West,USA,NorthPeak IT,11/2/2021,15400
+C003,Copperline Manufacturing,Manufacturing,220,Email Protect,Midwest,USA,,6/20/2023,8500
+C004,Granite Ridge University,Education,190,Email Protect,Northeast,USA,BlueGrid MSP,9/1/2022,7300
+C005,Foxglove Hotels & Resorts,Hospitality,180,Email Protect,South,USA,,1/15/2024,7500
+C006,Harborview Logistics,Transportation,160,Complete Protect,South,USA,PrairieTech Solutions,2/27/2023,10500
+C007,Beacon Legal Partners,Legal,150,Complete Protect,Northeast,USA,,6/8/2021,10200
+C008,Silverline Insurance,Financial Services,140,Complete Protect,Midwest,USA,,12/5/2022,8400
+C009,Willow Creek Clinics,Healthcare,130,Email Protect,West,USA,NorthPeak IT,4/22/2024,5100
+C010,Tundra Robotics,Technology,120,Complete Protect,West,Canada,,9/11/2023,7100
+C011,Maple Grove School District,Education,110,Email Protect,Midwest,USA,BlueGrid MSP,8/19/2024,4200
+C012,Ironwood Construction,Construction,105,Email Protect,South,USA,,2/3/2025,4200
+C013,Cedarbrook Foundation,Nonprofit,95,Email Protect,Northeast,USA,,5/16/2023,3500
+C014,Redrock Energy,Energy,85,Complete Protect,South,Canada,PrairieTech Solutions,7/25/2022,5200
+C015,Bluefin Media Group,Media,70,Email Protect,West,USA,,11/30/2024,2900
+C016,Meadowlark Foods,Retail,65,Email Protect,Midwest,Canada,NorthPeak IT,5/12/2025,2600
+C017,Quartzline Telecom,Technology,60,Complete Protect,Northeast,Canada,,10/9/2023,3700
+C018,Prairie Dental Group,Healthcare,45,Email Protect,Midwest,USA,BlueGrid MSP,8/1/2025,1800

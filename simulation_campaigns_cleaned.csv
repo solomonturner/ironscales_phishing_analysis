@@ -1,0 +1,37 @@
+campaign_id,campaign_name,sent_date,template_theme,difficulty
+SIM001,OCT-25-A,10/5/2025,IT Password Reset Required,Medium
+SIM002,OCT-25-B,10/12/2025,Fake Vendor Invoice,Hard
+SIM003,OCT-25-C,10/25/2025,HR Benefits Enrollment,Medium
+SIM004,NOV-25-A,11/5/2025,CEO Urgent Wire Request,Hard
+SIM005,NOV-25-B,11/12/2025,Package Delivery Notification,Easy
+SIM006,NOV-25-C,11/25/2025,Mailbox Storage Quota Full,Medium
+SIM007,DEC-25-A,12/3/2025,QR Code: Scan to View Document,Hard
+SIM008,DEC-25-B,12/12/2025,Recruiter / Job Offer Lure,Easy
+SIM009,DEC-25-C,12/25/2025,Payroll Direct Deposit Update,Hard
+SIM010,JAN-26-A,1/3/2026,Spoofed Security Training Invite,Medium
+SIM011,JAN-26-B,1/12/2026,Shared OneDrive Document,Medium
+SIM012,JAN-26-C,1/23/2026,Corporate Travel Itinerary,Easy
+SIM013,FEB-26-A,2/5/2026,IT Password Reset Required,Medium
+SIM014,FEB-26-B,2/12/2026,Fake Vendor Invoice,Hard
+SIM015,FEB-26-C,2/25/2026,HR Benefits Enrollment,Medium
+SIM016,MAR-26-A,3/3/2026,CEO Urgent Wire Request,Hard
+SIM017,MAR-26-B,3/14/2026,Package Delivery Notification,Easy
+SIM018,MAR-26-C,3/24/2026,Mailbox Storage Quota Full,Medium
+SIM019,APR-26-A,4/3/2026,QR Code: Scan to View Document,Hard
+SIM020,APR-26-B,4/12/2026,Recruiter / Job Offer Lure,Easy
+SIM021,APR-26-C,4/24/2026,Payroll Direct Deposit Update,Hard
+SIM022,MAY-26-A,5/3/2026,Spoofed Security Training Invite,Medium
+SIM023,MAY-26-B,5/14/2026,Shared OneDrive Document,Medium
+SIM024,MAY-26-C,5/23/2026,Corporate Travel Itinerary,Easy
+SIM025,JUN-26-A,6/5/2026,IT Password Reset Required,Medium
+SIM026,JUN-26-B,6/12/2026,Fake Vendor Invoice,Hard
+SIM027,JUN-26-C,6/25/2026,HR Benefits Enrollment,Medium
+SIM028,JUL-26-A,7/3/2026,CEO Urgent Wire Request,Hard
+SIM029,JUL-26-B,7/14/2026,Package Delivery Notification,Easy
+SIM030,JUL-26-C,7/23/2026,Mailbox Storage Quota Full,Medium
+SIM031,AUG-26-A,8/4/2026,QR Code: Scan to View Document,Hard
+SIM032,AUG-26-B,8/12/2026,Recruiter / Job Offer Lure,Easy
+SIM033,AUG-26-C,8/24/2026,Payroll Direct Deposit Update,Hard
+SIM034,SEP-26-A,9/3/2026,Spoofed Security Training Invite,Medium
+SIM035,SEP-26-B,9/13/2026,Shared OneDrive Document,Medium
+SIM036,SEP-26-C,9/23/2026,Corporate Travel Itinerary,Easy
