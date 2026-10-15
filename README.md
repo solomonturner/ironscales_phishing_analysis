@@ -49,15 +49,15 @@ As far as legitimate threats go, detection source and auto-remediation play a ma
 
 Weighted by volume, roughly 90% of all 7,500 incidents were remediated automatically, without human touch. Auto-remediation resolves an incident in about 3.1 minutes on average, whereas manual remediation averages about 2.1 hours (126.7 minutes). The gap makes sense: analysts spend their time on the tricky incidents that bypass the automated agent, which is exactly where human judgment belongs.
 
-![Dashboard — click rate fell 74% while reporting tripled; trained vs untrained click rates; automation remediates 40x faster than manual review; auto-remediation falls as human involvement rises](images/01-are-customers-getting-safer.png)
+<img width="1287" height="722" alt="01-are-customers-getting-safer" src="https://github.com/user-attachments/assets/60555494-7238-4c6e-be15-ea2d6a6d7d9a" />
 
 <details>
-<summary>SQL queries used (Q1, Q3, Q5, Q6)</summary>
+<summary>SQL queries used </summary> 
 
 Tracks phishing click and report rates month by month across the 12-month review period.
 
 ```sql
--- Q1: Monthly click rate and report rate trend
+-- Monthly click rate and report rate trend
 SELECT
     DATE_TRUNC('month', sent_date)::date AS month,
     ROUND(100.0 * SUM(clicked) / NULLIF(SUM(delivered), 0), 1) AS click_rate_percent,
@@ -70,7 +70,7 @@ ORDER BY month;
 Compares click rates for employees based on whether they had completed training before each campaign was sent.
 
 ```sql
--- Q3: Click rate for trained vs untrained employees (training status per campaign)
+-- Click rate for trained vs untrained employees (training status per campaign)
 WITH completed_training AS (
     SELECT
     employee_id,
@@ -97,7 +97,7 @@ ORDER BY training_status;
 Compares average incident remediation time for automated versus manual handling, month by month.
 
 ```sql
--- Q5: Average remediation time, automated vs manual, by month
+-- Average remediation time, automated vs manual, by month
 SELECT
     DATE_TRUNC('month', detected_date)::date AS month,
     CASE WHEN auto_remediated = 1 THEN 'Automated' ELSE 'Manual'
@@ -114,7 +114,7 @@ ORDER BY month,
 Calculates the auto-remediation rate and share of total incidents for each detection source.
 
 ```sql
--- Q6: Auto-remediation rate and incident share by detection source
+-- Auto-remediation rate and incident share by detection source
 SELECT
     detection_source,
     ROUND(100.0 * SUM(auto_remediated) / COUNT(*), 1) AS auto_remediation_rate_percent,
@@ -135,21 +135,21 @@ ORDER BY
 
 **Customer risk:** Of the 18 customers analyzed, Foxglove Hotels & Resorts, Meadowlark Foods, and Bluefin Media Group were identified as high-risk, combining above-average incident volumes with high click rates (10.3%–10.4%) and relatively low training completion (75%–80%). Prairie Dental Group stands out as an exception: despite the second-highest training completion rate (84.8%), it recorded the highest click rate (10.6%), suggesting a potential training effectiveness gap rather than an adoption issue.
 
-![Dashboard — 58.9% repeat offender rate, 10.6% max company click rate, 3 high-risk accounts; executives are the biggest phishing risk; customer risk rankings table](images/02-where-is-risk-concentrated.png)
+<img width="1286" height="720" alt="02-where-is-risk-concentrated" src="https://github.com/user-attachments/assets/fb3006c7-a5ff-47b9-ade6-a8c52cfd8cee" />
 
 **Threat trends:** The threat mix was broadly stable across the year, with one exception. QR code phishing increased approximately threefold between May and July 2026 (from around 50 to around 170 incidents per month) before receding. This resembles the QR sticker scams that affected the parking industry in 2024, where fraudulent codes were placed over legitimate parking signage until greater awareness helped address them. The pattern may reflect attackers exploiting a vulnerability at scale before filtering systems and user awareness catch up. By total volume, credential phishing led all year, with QR code phishing second only because of its concentrated surge; Business Email Compromise and malware attachments were the other persistent threats.
 
 *Note: Table uses threat_incidents, simulation_results, and training_completions.*
 
-![Ribbon chart — QR code phishing surged 3x in mid-2026, October 2025 to September 2026](images/02b-qr-code-phishing-surge.png)
+<img width="1286" height="721" alt="02b-qr-code-phishing-surge" src="https://github.com/user-attachments/assets/6e4f9d1e-0661-4f5c-8d42-c25b9ce1134f" />
 
 <details>
-<summary>SQL queries used (Q2, Q4, Q8, Q9)</summary>
+<summary>SQL queries used</summary>
 
 Calculates the phishing click rate for each department to identify the highest-risk groups.
 
 ```sql
--- Q2: Click rate by department
+-- Click rate by department
 SELECT
     employees.department,
     ROUND(100.0 * SUM(clicked) / NULLIF(SUM(delivered), 0), 1) AS click_rate_percent
@@ -163,7 +163,7 @@ ORDER BY click_rate_percent DESC;
 Identifies employees who clicked two or more simulations and measures their concentration within each department.
 
 ```sql
--- Q4: Repeat offenders (clicked 2+ simulations) by department
+-- Repeat offenders (clicked 2+ simulations) by department
 WITH repeat_offenders AS(
     SELECT
     employee_id
@@ -272,15 +272,16 @@ False positives occur when a detection source incorrectly flags legitimate activ
 
 The high false-positive rate among User Reports may reflect employee vigilance, although it also presents an opportunity to improve reporting accuracy and reduce unnecessary investigation. Virtual SOC, the only method involving IRONSCALES' professional analysts reviewing ambiguous threats, had the lowest false-positive rate. This may offer an accuracy advantage, though it should be weighed against the time and resources required for manual review. Further investigation could determine whether targeted employee training can reduce false-positive reports while maintaining vigilance against genuine threats.
 
-![Dashboard — MSP-managed vs direct: no measurable difference; end-user reports false-positive 5x more than analyst review](images/03-how-reliable-is-the-operation.png)
+<img width="1285" height="725" alt="03-how-reliable-is-the-operation" src="https://github.com/user-attachments/assets/8f50b834-953c-4366-9eb9-cf95686b0af3" />
+
 
 <details>
-<summary>SQL queries used (Q7, Q10)</summary>
+<summary>SQL queries used</summary>
 
 Calculates the share of incidents flagged as false positives for each detection source.
 
 ```sql
--- Q7: False-positive rate by detection source
+-- False-positive rate by detection source
 SELECT
     detection_source,
     ROUND(100.0 * SUM(CASE WHEN disposition = 'False Positive' THEN 1 ELSE 0 END) / COUNT(*), 1) AS false_positive_rate,
@@ -293,7 +294,7 @@ ORDER BY false_positive_rate DESC;
 Compares average report rates and training completion between MSP-managed and directly managed customers.
 
 ```sql
--- Q10: Report rate and training completion, MSP-managed vs direct customers
+-- Report rate and training completion, MSP-managed vs direct customers
 WITH report_rate AS (
     SELECT
         customer_id,
@@ -340,15 +341,4 @@ Further improvements require targeted interventions rather than more of the same
 
 Persistent offenders should receive targeted remediation in coordination with their managers, while Foxglove Hotels & Resorts, Bluefin Media Group, and Meadowlark Foods should receive direct outreach from their account manager to address their elevated risk. Finally, the surge in QR code phishing highlights the need for ongoing emerging-threat monitoring to identify and respond to new attack vectors sooner.
 
-## Repository Structure
-
-```
-├── data/                  # 6 synthetic CSVs (customers, employees, campaigns,
-│                          #   simulation results, threat incidents, training)
-├── sql/
-│   ├── schema.sql         # table definitions
-│   ├── load_data.sql      # CSV import
-│   └── analysis.sql       # all 10 analysis queries with findings
-├── images/                # Power BI dashboard screenshots
-└── README.md
-```
+_Note: ad hoc queries were used for additional context in the write-up and are not included in the "SQL queries used" sections above._
