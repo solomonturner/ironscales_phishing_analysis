@@ -17,7 +17,7 @@ Across 18 customers and 12 months, the answer is yes: click rates fell 74% while
 
 ## Project Context & Objectives
 
-Acting as the data analyst at IRONSCALES, I conducted a 12-month security posture review (October 2025 – September 2026) across 18 customer companies. The objectives were to determine whether customers are getting safer, where risk is still concentrated, and how reliable the detection and response operation is — then recommend where the team should focus next.
+Acting as the data analyst at IRONSCALES, I conducted a 12-month security posture review (October 2025 – September 2026) across 18 customer companies. The objectives were to determine whether customers are getting safer, where risk is still concentrated, and how reliable the detection and response operation is, then recommend where the team should focus next.
 
 ## Data Sourcing and Preparation
 
